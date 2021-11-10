@@ -9,7 +9,7 @@
 
   let theme = "dark";
   let color = "dark";
-  let title = "SB Admin Svelte";
+  let title = "Admin Panel";
 </script>
 
 <svelte:head>

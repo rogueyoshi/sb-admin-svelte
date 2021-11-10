@@ -13,8 +13,8 @@
   let isPageOpen = false;
   let isAuthenticationOpen = false;
   let isErrorOpen = false;
-  let activeLink = "Dashboard";
-  let footerName = "SB Admin Svelte";
+  let activeLink = "Analytics Dashboard";
+  let footerName = "Allegheny West";
   let footerText = "Logged in as:";
 
   const updateActiveLink = linkName => (activeLink = linkName);
@@ -61,7 +61,7 @@
           href=".">
           <i class="fas fa-tachometer-alt" slot="leftIcon" />
         </SidebarItem>
-        <div class="sb-sidenav-menu-heading">Interface</div>
+        <div class="sb-sidenav-menu-heading">Statistics</div>
         <SidebarItem
           on:press={toggleLayout}
           class={!isLayoutOpen ? 'collapsed' : ''}
