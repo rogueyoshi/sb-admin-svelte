@@ -14,7 +14,11 @@
   import AreaChart from "../components/Charts/AreaChart.svelte";
   import BarChart from "../components/Charts/BarChart.svelte";
   import AverageActivity from "../components/Charts/AverageActivity.svelte";
-import AverageScore from "../components/AverageScore.svelte";
+  import AverageScore from "../components/AverageScore.svelte";
+  import TopEngagements from "../components/TopEngagements.svelte";
+  import PieChart from "../components/Charts/PieChart.svelte";
+  import CardFooter from "sveltestrap/src/CardFooter.svelte";
+  import SubjectPopularity from "../components/Charts/SubjectPopularity.svelte";
 
   let title = "Admin Panel";
 </script>
@@ -24,22 +28,22 @@ import AverageScore from "../components/AverageScore.svelte";
 </svelte:head>
 <h1 class="mt-4">Dashboard</h1>
 <Breadcrumb class="mb-4">
-  <BreadcrumbItem active>STEM Activities</BreadcrumbItem>
+  <BreadcrumbItem active>Activities Overview</BreadcrumbItem>
 </Breadcrumb>
 <Row>
   <div class="col-xl-3 col-md-6">
     <CustomCard cardTitle="122" cardIcon="fas fa-users">
-      Registered Students
+      Registered students
     </CustomCard>
   </div>
   <div class="col-xl-3 col-md-6">
     <CustomCard cardTitle="6.8 (+12%)" cardIcon="fas fa-chart-area">
-      Average Mastery
+      Average mastery
     </CustomCard>
   </div>
   <div class="col-xl-3 col-md-6">
     <CustomCard cardTitle="12 (10%)" cardIcon="fas fa-level-down-alt">
-      Underperforming Students
+      Underperforming students
     </CustomCard>
   </div>
   <div class="col-xl-3 col-md-6">
@@ -50,33 +54,34 @@ import AverageScore from "../components/AverageScore.svelte";
 </Row>
 <Row>
   <div class="col-xl-6">
-    <CustomCard cardTitle="Students' Average Activity" cardIcon="fas fa-chart-area">
+    <CustomCard cardTitle="Students' average activity" cardIcon="fas fa-chart-area">
       <AverageActivity />
     </CustomCard>
   </div>
+  <div class="col-xl-6">
+    <Card class="mb-4">
+      <CardHeader>
+        <i class="fas fa-chart-pie" />
+        Popularity of subjects
+      </CardHeader>
+      <CardBody>
+        <SubjectPopularity />
+      </CardBody>
+      <CardFooter class="small text-muted"># of completed assignments</CardFooter>
+    </Card>
+  </div>
+</Row>
+<Row>
   <div class="col-xl-3">
-  <CustomCard cardTitle="Students' Average Score" cardIcon="fas fa-table">
+  <CustomCard cardTitle="Student period earnings" cardIcon="fas fa-table">
     <AverageScore />
   </CustomCard>
   </div>
   <div class="col-xl-3">
-    <CustomCard cardTitle="Top Engagements" cardIcon="fas fa-table">
-      <ul>
-        <li>
-          Lecture: Computer Engineering 3 (230 Views, 91%)
-        </li>
-        <li>
-          Video: Introduction to Programming (190 Views, 85%)
-        </li>
-        <li>
-          Page: Applied Algebra (154 Views, 79%)
-        </li>
-      </ul>
+    <CustomCard cardTitle="Top engagements" cardIcon="fas fa-table">
+      <TopEngagements />
     </CustomCard>
   </div>
-</Row>
-
-<Row>
   <div class="col-xl-3 col-md-6">
     <CustomCard cardTitle="4" cardIcon="fas fa-users">
       Days until next assignments

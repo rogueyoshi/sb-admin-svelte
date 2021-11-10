@@ -2,7 +2,7 @@
   import Container from "sveltestrap/src/Container.svelte";
 
   import Navbar from "../components/Navbar.svelte";
-  import Sidebar from "../components/Sidebar.svelte";
+  import NewSidebar from "../components/NewSidebar.svelte";
   import Footer from "../components/Footer.svelte";
 
   export let segment;
@@ -20,7 +20,7 @@
   <div class="sb-nav-fixed">
     <Navbar {segment} {color} {title} />
     <div id="layoutSidenav">
-      <Sidebar {segment} {theme} />
+      <NewSidebar {segment} {theme} />
       <div id="layoutSidenav_content">
         <main>
           <Container fluid={true}>

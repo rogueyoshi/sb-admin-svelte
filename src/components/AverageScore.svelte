@@ -1,24 +1,22 @@
 <script>
   import Table from "sveltestrap/src/Table.svelte";
 
-  const tableHeading = ["Name", "Score"];
+  const tableHeading = ["Name", "Earnings"];
   const tableData = [
-    { name: "Mark", score: "9.3" },
-    { name: "Jacob", score: "8.7" },
-    { name: "Jacob", score: "8.7" },
-    { name: "Jacob", score: "8.7" },
-    { name: "Jacob", score: "8.7" },
-    { name: "Larry", score: "8.7" }
+    { name: "@door_to_tomorrow", score: "3000" },
+    { name: "@underdogs_secret", score: "2700" },
+    { name: "@winning_formula", score: "2550" },
+    { name: "@wings_to_discovery", score: "2400" }
   ];
 
 
 </script>
 
-<Table bordered responsive>
+<Table responsive>
   <tbody>
     {#each tableData as data}
       <tr>
-        <td>{data.name}</td>
+        <th scope="row">{data.name}</th>
         <td>{data.score}</td>
       </tr>
     {/each}
